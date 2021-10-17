@@ -68,6 +68,11 @@ class StringCalculator {
 	    }
 	    return returnValue;   
 	}
+
+	public Integer numberBigger(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
     
 }
