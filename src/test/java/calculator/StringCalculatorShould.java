@@ -24,4 +24,8 @@ class StringCalculatorShould
     void any_amount_Of_Numbers_Return_Values_are_their_Sums() {
         assertEquals(3+6+15+18+46+33, stringCalculator.add("3,6,15,18,46,33"));
     }
+    @Test
+    void new_line_between_numbers_returnValues_are_their_Sums() {
+        assertEquals(6, stringCalculator.add("1\\n2,3"));
+    }
 }
