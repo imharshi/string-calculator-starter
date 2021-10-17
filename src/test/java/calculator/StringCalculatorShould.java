@@ -57,6 +57,6 @@ class StringCalculatorShould
     //6
     @Test
     void whenOneOrMoreNumbersAreGreaterThan1000IsUsedThenItIsNotIncludedInSum() {
-        assertEquals(3+1000+6, stringCalculator.numberBigger("3,1000,1001,6,1234"));
+        assertEquals(2, stringCalculator.numberBigger("1000","2"));
     }
 }
