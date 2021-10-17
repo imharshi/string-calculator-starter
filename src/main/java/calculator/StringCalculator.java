@@ -23,5 +23,10 @@ class StringCalculator {
         }
         return returnValue;
     }
+
+	public Integer delimiter(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
     
 }
