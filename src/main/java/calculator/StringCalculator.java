@@ -1,5 +1,8 @@
 package calculator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class StringCalculator {
 
     public int add(String input) {
@@ -46,9 +49,25 @@ class StringCalculator {
 	    return returnValue;
 	}
 
-	public void negativeNumber(String string) {
-		// TODO Auto-generated method stub
-		
+	public int negativeNumber(String numbers) {
+		String delimiter="";
+		int returnValue = 0;
+	    String[] numbersArray = numbers.split(delimiter);
+	    List negativeNumbers = new ArrayList();
+	    for (String number : numbersArray) {
+	        if (!number.trim().isEmpty()) {
+	            int numberInt = Integer.parseInt(number.trim());
+	            if (numberInt < 0) {
+	                negativeNumbers.add(numberInt);
+	            }
+	            returnValue += numberInt;
+	        }
+	    }
+	    if (negativeNumbers.size() > 0) {
+	        throw new RuntimeException("Negatives not allowed: " + negativeNumbers.toString());
+	    }
+	    return returnValue;   
 	}
+	
     
 }
