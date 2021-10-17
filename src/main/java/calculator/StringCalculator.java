@@ -3,7 +3,14 @@ package calculator;
 class StringCalculator {
 
     public int add(String input) {
-        return 0;
+        int returnValue = 0;
+        String[] numbersArray = input.split(",");
+        for (String number : numbersArray) {
+            if (!number.trim().isEmpty()) { 
+                returnValue += Integer.parseInt(number);
+            }
+        }
+        return returnValue;
     }
-
+    
 }
