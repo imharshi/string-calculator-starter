@@ -37,6 +37,6 @@ class StringCalculatorShould
     //4
     @Test
     void when_Delimiter_Is_Specified_SeparateNumbers() {
-        assertEquals(3, stringCalculator.delimiter("//;\n1;2"));
+        assertEquals(6, stringCalculator.delimiter("//;n1;2;3"));
     }
 }
