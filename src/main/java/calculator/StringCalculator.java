@@ -45,5 +45,10 @@ class StringCalculator {
 	    }
 	    return returnValue;
 	}
+
+	public void negativeNumber(String string) {
+		// TODO Auto-generated method stub
+		
+	}
     
 }

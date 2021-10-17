@@ -39,4 +39,18 @@ class StringCalculatorShould
     void when_Delimiter_Is_Specified_SeparateNumbers() {
         assertEquals(6, stringCalculator.delimiter("//;n1;2;3"));
     }
+    
+    //5
+    
+    @Test
+    void negativeNumber_RuntimeException_Is_Thrown() {
+        RuntimeException exception = null;
+        try {
+            stringCalculator.negativeNumber("3,-6,15,-18,46,33");
+        } catch (RuntimeException e) {
+            exception = e;
+        }
+        assertNotNull(exception);
+        assertEquals("Negatives not allowed: [-6, -18]", exception.getMessage());
+    }
 }
