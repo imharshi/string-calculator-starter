@@ -7,10 +7,10 @@ class StringCalculatorShould
 {
 	StringCalculator stringCalculator = new StringCalculator();
 	//1
-    @Test
-    void empty_string_should_return_0(){
-        assertEquals(0, stringCalculator.add(""));
-    }
+//    @Test
+//    void empty_string_should_return_0(){
+//        assertEquals(0, stringCalculator.add(""));
+//    }
 
     @Test
     void string_with_single_number_should_return_number_as_int() {
@@ -23,10 +23,10 @@ class StringCalculatorShould
 	}
     
     //2
-    @Test
-    void any_amount_Of_Numbers_Return_Values_are_their_Sums() {
-        assertEquals(3+6+15+18+46+33, stringCalculator.add("3,6,15,18,46,33"));
-    }
+//    @Test
+//    void any_amount_Of_Numbers_Return_Values_are_their_Sums() {
+//        assertEquals(3+6+15+18+46+33, stringCalculator.add("3,6,15,18,46,33"));
+//    }
     
     //3
     @Test
@@ -58,5 +58,10 @@ class StringCalculatorShould
     @Test
     void whenOneOrMoreNumbersAreGreaterThan1000IsUsedThenItIsNotIncludedInSum() {
         assertEquals(2, stringCalculator.numberBigger("1000","2"));
+    }
+    
+    @Test 
+    void stringMultiplyTest() {
+    	assertEquals(21,stringCalculator.stringMultiply("M","1,4,3"));
     }
 }

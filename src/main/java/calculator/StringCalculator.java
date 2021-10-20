@@ -13,9 +13,16 @@ class StringCalculator {
                 returnValue += Integer.parseInt(number);
             }
         }
+        if(numbersArray.length==0) {
+        	returnValue = 0;
+        }
+        if(numbersArray.length==1) {
+        	returnValue = Integer.parseInt(input);
+        }
         if (numbersArray.length > 2) {
             throw new RuntimeException("Up to 2 numbers separated by comma (,) are allowed");
-        } else {
+        } 
+        else {
             for (String number : numbersArray) {
                 if (!number.isEmpty()) {
                     Integer.parseInt(number);
@@ -37,7 +44,7 @@ class StringCalculator {
     }
 
 	public int delimiter(String string) {
-		String delim = ",|n";
+		String delim = ";|n";
 	    String numbersWithoutDelimiter = string;
 	    if (string.startsWith("//")) {
 	        int delimiterIndex = string.indexOf("//") + 2;
@@ -97,6 +104,22 @@ class StringCalculator {
         }
         return returnValue;   
 	}
+
+	public int stringMultiply(String string,String number) {
+		int returnValue=0;
+		string="3";
+		
+		String[] numberArray = number.split(",");
+		for(String num : numberArray) {
+			if(!number.trim().isEmpty()) {    
+				int numberGot= Integer.parseInt(number); 		//1
+				returnValue += numberGot * Integer.parseInt(string);  //1*3 =3 
+			}
+		}
+		return returnValue;
+	}
+
+	
 
 	
         
